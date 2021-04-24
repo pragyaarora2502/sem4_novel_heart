@@ -1,0 +1,188 @@
+
+Basic Description of Data
+
+
+Data Shape
+(585, 36)
+
+Target Variable types
+normal        351
+murmur        129
+extrastole     46
+artifact       40
+extrahls       19
+Name: type, dtype: int64
+
+Value counts of records having normal heartbeat
+1.0    351
+0.0    234
+Name: normal, dtype: int64
+
+
+Train test stratified split with 25% ratio
+
+Train size:  438
+Test size:  147
+
+Target Variable counts in Train data:  normal
+1.0       263
+0.0       175
+dtype: int64
+
+
+Random Forest Classifier: 
+
+OOB score:  0.9726027397260274
+
+Train Accuracy Score:  1.0
+Train data Confusion Matrix: 
+ [[175   0]
+ [  0 263]]
+
+Test Accuracy Score:  0.9591836734693877
+Test data Confusion Matrix: 
+ [[58  1]
+ [ 5 83]]
+
+Complete data Accuracy Score:  0.9897435897435898
+Complete data Confusion Matrix: 
+ [[233   1]
+ [  5 346]]
+
+Classification report on test data: 
+               precision    recall  f1-score   support
+
+         0.0       0.92      0.98      0.95        59
+         1.0       0.99      0.94      0.97        88
+
+    accuracy                           0.96       147
+   macro avg       0.95      0.96      0.96       147
+weighted avg       0.96      0.96      0.96       147
+
+
+Model saved as no_clips_layer_1_RF.sav
+
+
+Gradient Boosting Classifier: 
+
+Train Accuracy Score:  1.0
+Train data Confusion Matrix: 
+ [[175   0]
+ [  0 263]]
+
+Test Accuracy Score:  0.9931972789115646
+Test data Confusion Matrix: 
+ [[58  1]
+ [ 0 88]]
+
+Complete data Accuracy Score:  0.9982905982905983
+Complete data Confusion Matrix: 
+ [[233   1]
+ [  0 351]]
+
+Classification report on test data: 
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99        59
+         1.0       0.99      1.00      0.99        88
+
+    accuracy                           0.99       147
+   macro avg       0.99      0.99      0.99       147
+weighted avg       0.99      0.99      0.99       147
+
+
+Model saved as no_clips_layer_1_GB.sav
+
+
+
+Train test stratified split with 25% ratio
+
+Train size:  174
+Test size:  59
+
+Target Variable counts in Train data:  type
+3       96
+2       34
+0       30
+1       14
+dtype: int64
+
+
+Random Forest Classifier: 
+
+OOB score:  0.8908045977011494
+
+Train Accuracy Score:  1.0
+Train data Confusion Matrix: 
+ [[30  0  0  0]
+ [ 0 14  0  0]
+ [ 0  0 34  0]
+ [ 0  0  0 96]]
+
+Test Accuracy Score:  0.9491525423728814
+Test data Confusion Matrix: 
+ [[ 9  0  0  1]
+ [ 0  3  0  1]
+ [ 0  0 11  1]
+ [ 0  0  0 33]]
+
+Complete data Accuracy Score:  0.9871244635193133
+Complete data Confusion Matrix: 
+ [[ 39   0   0   1]
+ [  0  17   0   1]
+ [  0   0  45   1]
+ [  0   0   0 129]]
+
+Classification report on test data: 
+               precision    recall  f1-score   support
+
+           0       1.00      0.90      0.95        10
+           1       1.00      0.75      0.86         4
+           2       1.00      0.92      0.96        12
+           3       0.92      1.00      0.96        33
+
+    accuracy                           0.95        59
+   macro avg       0.98      0.89      0.93        59
+weighted avg       0.95      0.95      0.95        59
+
+
+Model saved as no_clips_layer_2_RF.sav
+
+
+Gradient Boosting Classifier: 
+
+Train Accuracy Score:  1.0
+Train data Confusion Matrix: 
+ [[30  0  0  0]
+ [ 0 14  0  0]
+ [ 0  0 34  0]
+ [ 0  0  0 96]]
+
+Test Accuracy Score:  0.9830508474576272
+Test data Confusion Matrix: 
+ [[10  0  0  0]
+ [ 0  3  0  1]
+ [ 0  0 12  0]
+ [ 0  0  0 33]]
+
+Complete data Accuracy Score:  0.9957081545064378
+Complete data Confusion Matrix: 
+ [[ 40   0   0   0]
+ [  0  17   0   1]
+ [  0   0  46   0]
+ [  0   0   0 129]]
+
+Classification report on test data: 
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        10
+           1       1.00      0.75      0.86         4
+           2       1.00      1.00      1.00        12
+           3       0.97      1.00      0.99        33
+
+    accuracy                           0.98        59
+   macro avg       0.99      0.94      0.96        59
+weighted avg       0.98      0.98      0.98        59
+
+
+Model saved as no_clips_layer_2_GB.sav
